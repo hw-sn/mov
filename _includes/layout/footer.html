@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md first">
+      <a class="p-name" href="{{ site.imprint }}" title="Terms & Conditions">
+        &copy; {{ 'now' | date: "%Y" }} {{ site.author }}
+      </a>
+    </div>
+    <div class="col-md">
+      <a class="u-url" href="{{ site.website }}" title="Visit our website">
+        <i class="fa fa-globe"></i>
+      </a>
+      &nbsp;
+      <a class="u-mail" href="mailto:{{ site.email }}" title="Contact us">
+        <i class="fa fa-envelope"></i>
+      </a>
+      &nbsp;
+      <a href="{{ site.support }}" title="Request support">
+        <i class="fa fa-comments"></i>
+      </a>
+    </div>
+    <div class="col-md last">
+      <span class="iconify" data-icon="octicon-code"></span>
+      &nbsp;and&nbsp;
+      <span class="iconify" data-icon="octicon-pencil"></span>
+      &nbsp;with&nbsp;
+      <span class="iconify" data-icon="octicon-heart"></span>
+      &nbsp;+&nbsp;
+      <a href="https://github.com" title="GitHub">
+        <span class="iconify" data-icon="octicon-mark-github"></span>
+      </a>
+      &nbsp;+&nbsp;
+      <a href="https://jekyllrb.com/" title="Jekyll">
+        <img src="{{ "/assets/img/jekyll.svg" | relative_url }}" alt="jekyll"
+             style="width:14px"></img>
+      </a>
+    </div>
+  </div>
