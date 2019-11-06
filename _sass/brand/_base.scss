@@ -5,19 +5,20 @@
 ;
 
 // Base unit definition
-$max-site-width: 1920px;
+$max-site-width:   1920px;
 $min-content-width: 800px;
-$logo-width: 120px;
+$logo-width:        120px;
 
 $grid-gutter-width: $logo-width / 6 ;
 $small-gutter-width: $logo-width / 8 ;
 
 $header-height: $grid-gutter-width * 4;
-$footer-height: 3rem;
+$footer-height:    3rem;
 $footer-height-md: 6rem;
 
 $base-font-family: HoneywellSans, Helvetica, Arial;
-$base-font-size: 16px;
-$small-font-size:  1rem * 0.875;
-$base-line-height: 1.48;
+$base-font-size:       16px;
+$small-font-size:      1rem * 0.875; // 14px
+$smaller-font-size:    1rem * 0.8125; // 13px
+$base-line-height:     1.48;
 $base-paragraph-space: 1.39rem;

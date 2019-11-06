@@ -3,7 +3,6 @@ Toc logic by allejo
 https://github.com/allejo/jekyll-toc
 ***** modified *****
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++{% endcomment %}
-{% unless page.no_toc %}
 {% capture tocWorkspace %}
     {% comment %}
         Version 1.0.8
@@ -85,4 +84,3 @@ https://github.com/allejo/jekyll-toc
 {{ my_toc | lstrip }}{% endcapture %}
     {% endif %}
 {% endcapture %}{% assign tocWorkspace = '' %}{{ my_toc | markdownify | strip }}
-{% endunless %}

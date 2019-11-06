@@ -1,6 +1,6 @@
 ---
 title: Coconuts
-summary: this is about coconuts
+no_toc: true
 ---
 
 A very narrow article.
