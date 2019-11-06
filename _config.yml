@@ -32,3 +32,22 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Default page front matter settings
+defaults:
+  -
+    scope:
+      path: "docs"
+    values:
+      layout: "page"
+      isDoc: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      no_breadcrumbs: true
+
+# Permalink style for published files
+permalink: pretty
