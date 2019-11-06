@@ -6,10 +6,10 @@
   font-family: 'HoneywellSans';
   font-weight: 100;
   font-style: normal;
-  src: url('/assets/fonts/HoneywellSansLight.eot');
-  src: url('/assets/fonts/HoneywellSansLight.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/HoneywellSansLight.woff') format('woff'),
-       url('/assets/fonts/HoneywellSansLight.ttf') format('truetype'),
+  src: url(asset_path('fonts/HoneywellSansLight.eot'));
+  src: url(asset_path('fonts/HoneywellSansLight.eot?#iefix')) format('embedded-opentype'),
+       url(asset_path('fonts/HoneywellSansLight.woff')) format('woff'),
+       url(asset_path('fonts/HoneywellSansLight.ttf')) format('truetype'),
 }
 
 @font-face
@@ -17,31 +17,31 @@
   font-family: 'HoneywellSans';
   font-weight: 100;
   font-style: italic;
-  src: url('/assets/fonts/HoneywellSansLightItalic.eot');
-  src: url('/assets/fonts/HoneywellSansLightItalic.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/HoneywellSansLightItalic.woff') format('woff'),
-       url('/assets/fonts/HoneywellSansLightItalic.ttf') format('truetype'),
+  src: url(asset_path('fonts/HoneywellSansLightItalic.eot'));
+  src: url(asset_path('fonts/HoneywellSansLightItalic.eot?#iefix')) format('embedded-opentype'),
+       url(asset_path('fonts/HoneywellSansLightItalic.woff')) format('woff'),
+       url(asset_path('fonts/HoneywellSansLightItalic.ttf')) format('truetype'),
 }
 
 @font-face {
     font-family: 'HoneywellSans';
     font-weight: 300;
     font-style: normal;
-    src: url('/assets/fonts/HoneywellSansBook.eot');
-    src: url('/assets/fonts/HoneywellSansBook.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/HoneywellSansBook.woff') format('woff'),
-         url('/assets/fonts/HoneywellSansBook.ttf') format('truetype'),
-         /*url('/assets/fonts/HoneywellSansBook.svg#HoneywellSansBook') format('svg');*/
+    src: url(asset_path('fonts/HoneywellSansBook.eot'));
+    src: url(asset_path('fonts/HoneywellSansBook.eot?#iefix')) format('embedded-opentype'),
+         url(asset_path('fonts/HoneywellSansBook.woff')) format('woff'),
+         url(asset_path('fonts/HoneywellSansBook.ttf')) format('truetype'),
+         /*url(asset_path('fonts/HoneywellSansBook.svg#HoneywellSansBook')) format('svg');*/
 }
 
 @font-face {
     font-family: 'HoneywellSans';
     font-weight: 300;
     font-style: italic;
-    src: url('/assets/fonts/HoneywellSansBookItalic.eot');
-    src: url('/assets/fonts/HoneywellSansBookItalic.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/HoneywellSansBookItalic.woff') format('woff'),
-         url('/assets/fonts/HoneywellSansBookItalic.ttf') format('truetype'),
+    src: url(asset_path('fonts/HoneywellSansBookItalic.eot'));
+    src: url(asset_path('fonts/HoneywellSansBookItalic.eot?#iefix')) format('embedded-opentype'),
+         url(asset_path('fonts/HoneywellSansBookItalic.woff')) format('woff'),
+         url(asset_path('fonts/HoneywellSansBookItalic.ttf')) format('truetype'),
 }
 
 @font-face
@@ -49,10 +49,10 @@
   font-family: 'HoneywellSans';
   font-weight: 400;
   font-style: normal;
-  src: url('/assets/fonts/HoneywellSansMedium.eot');
-  src: url('/assets/fonts/HoneywellSansMedium.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/HoneywellSansMedium.woff') format('woff'),
-       url('/assets/fonts/HoneywellSansMedium.ttf') format('truetype'),
+  src: url(asset_path('fonts/HoneywellSansMedium.eot'));
+  src: url(asset_path('fonts/HoneywellSansMedium.eot?#iefix')) format('embedded-opentype'),
+       url(asset_path('fonts/HoneywellSansMedium.woff')) format('woff'),
+       url(asset_path('fonts/HoneywellSansMedium.ttf')) format('truetype'),
 }
 
 @font-face
@@ -60,10 +60,10 @@
   font-family: 'HoneywellSans';
   font-weight: 400;
   font-style: italic;
-  src: url('/assets/fonts/HoneywellSansMediumItalic.eot');
-  src: url('/assets/fonts/HoneywellSansMediumItalic.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/HoneywellSansMediumItalic.woff') format('woff'),
-       url('/assets/fonts/HoneywellSansMediumItalic.ttf') format('truetype'),
+  src: url(asset_path('fonts/HoneywellSansMediumItalic.eot'));
+  src: url(asset_path('fonts/HoneywellSansMediumItalic.eot?#iefix')) format('embedded-opentype'),
+       url(asset_path('fonts/HoneywellSansMediumItalic.woff')) format('woff'),
+       url(asset_path('fonts/HoneywellSansMediumItalic.ttf')) format('truetype'),
 }
 
 @font-face
@@ -71,10 +71,10 @@
   font-family: 'HoneywellSans';
   font-weight: 700;
   font-style: normal;
-  src: url('/assets/fonts/HoneywellSansBold.eot');
-  src: url('/assets/fonts/HoneywellSansBold.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/HoneywellSansBold.woff') format('woff'),
-       url('/assets/fonts/HoneywellSansBold.ttf') format('truetype'),
+  src: url(asset_path('fonts/HoneywellSansBold.eot'));
+  src: url(asset_path('fonts/HoneywellSansBold.eot?#iefix')) format('embedded-opentype'),
+       url(asset_path('fonts/HoneywellSansBold.woff')) format('woff'),
+       url(asset_path('fonts/HoneywellSansBold.ttf')) format('truetype'),
 }
 
 @font-face
@@ -82,10 +82,10 @@
   font-family: 'HoneywellSans';
   font-weight: 700;
   font-style: italic;
-  src: url('/assets/fonts/HoneywellSansBoldItalic.eot');
-  src: url('/assets/fonts/HoneywellSansBoldItalic.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/HoneywellSansBoldItalic.woff') format('woff'),
-       url('/assets/fonts/HoneywellSansBoldItalic.ttf') format('truetype'),
+  src: url(asset_path('fonts/HoneywellSansBoldItalic.eot'));
+  src: url(asset_path('fonts/HoneywellSansBoldItalic.eot?#iefix')) format('embedded-opentype'),
+       url(asset_path('fonts/HoneywellSansBoldItalic.woff')) format('woff'),
+       url(asset_path('fonts/HoneywellSansBoldItalic.ttf')) format('truetype'),
 }
 
 @font-face
@@ -93,10 +93,10 @@
   font-family: 'HoneywellSans';
   font-weight: 800;
   font-style: normal;
-  src: url('/assets/fonts/HoneywellSansExtrabold.eot');
-  src: url('/assets/fonts/HoneywellSansExtrabold.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/HoneywellSansExtrabold.woff') format('woff'),
-       url('/assets/fonts/HoneywellSansExtrabold.ttf') format('truetype'),
+  src: url(asset_path('fonts/HoneywellSansExtrabold.eot'));
+  src: url(asset_path('fonts/HoneywellSansExtrabold.eot?#iefix')) format('embedded-opentype'),
+       url(asset_path('fonts/HoneywellSansExtrabold.woff')) format('woff'),
+       url(asset_path('fonts/HoneywellSansExtrabold.ttf')) format('truetype'),
 }
 
 @font-face
@@ -104,10 +104,10 @@
   font-family: 'HoneywellSans';
   font-weight: 800;
   font-style: italic;
-  src: url('/assets/fonts/HoneywellSansExtraboldItalic.eot');
-  src: url('/assets/fonts/HoneywellSansExtraboldItalic.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/HoneywellSansExtraboldItalic.woff') format('woff'),
-       url('/assets/fonts/HoneywellSansExtraboldItalic.ttf') format('truetype'),
+  src: url(asset_path('fonts/HoneywellSansExtraboldItalic.eot'));
+  src: url(asset_path('fonts/HoneywellSansExtraboldItalic.eot?#iefix')) format('embedded-opentype'),
+       url(asset_path('fonts/HoneywellSansExtraboldItalic.woff')) format('woff'),
+       url(asset_path('fonts/HoneywellSansExtraboldItalic.ttf')) format('truetype'),
 }
 
 @font-face
@@ -115,10 +115,10 @@
   font-family: 'HoneywellSans';
   font-weight: 900;
   font-style: normal;
-  src: url('/assets/fonts/HoneywellSansBlack.eot');
-  src: url('/assets/fonts/HoneywellSansBlack.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/HoneywellSansBlack.woff') format('woff'),
-       url('/assets/fonts/HoneywellSansBlack.ttf') format('truetype'),
+  src: url(asset_path('fonts/HoneywellSansBlack.eot'));
+  src: url(asset_path('fonts/HoneywellSansBlack.eot?#iefix')) format('embedded-opentype'),
+       url(asset_path('fonts/HoneywellSansBlack.woff')) format('woff'),
+       url(asset_path('fonts/HoneywellSansBlack.ttf')) format('truetype'),
 }
 
 @font-face
@@ -126,8 +126,8 @@
   font-family: 'HoneywellSans';
   font-weight: 900;
   font-style: italic;
-  src: url('/assets/fonts/HoneywellSansBlackItalic.eot');
-  src: url('/assets/fonts/HoneywellSansBlackItalic.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/HoneywellSansBlackItalic.woff') format('woff'),
-       url('/assets/fonts/HoneywellSansBlackItalic.ttf') format('truetype'),
+  src: url(asset_path('fonts/HoneywellSansBlackItalic.eot'));
+  src: url(asset_path('fonts/HoneywellSansBlackItalic.eot?#iefix')) format('embedded-opentype'),
+       url(asset_path('fonts/HoneywellSansBlackItalic.woff')) format('woff'),
+       url(asset_path('fonts/HoneywellSansBlackItalic.ttf')) format('truetype'),
 }
