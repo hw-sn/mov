@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include layout/head.html -%}
+
+  <body data-spy="scroll" data-target="#page_toc" data-offset="100">
+    <div id="page_overlay"></div>
+    <div class="push__wrapper">
+
+      <!-- Header section -->
+      <header class="site__header" role="banner">
+        <div class="row">
+          <!-- Header spacer -->
+          <div class="col-lg-2 col-md-3 base spacer"></div>
+          <!--Header secondary: Banner -->
+          <div class="col-lg-2 col-md-3 base secondary">
+            <a class="" rel="author" href="{{ "/" | relative_url }}">
+              <img class="site__logo" src="{{ "/assets/img/logo_red.svg" | relative_url }}" alt="{{ site.title | escaped }}"></img>
+              <p>{{ site.subject }}</p>
+            </a>
+          </div>
+          <!-- Header primary: Topnav -->
+          <nav class="col primary" role="navigation">
+            <button id="toggle_sidebar" onclick="nav_toggle()" class="btn"><i class="fa fa-bars"></i></button>
+            <nav id="page_breadcrumb" aria-label="breadcrumb">
+              {%- include layout/breadcrumb.html -%}
+            </nav>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Content section -->
+      <div class="site__content">
+        <div class="row">
+          <!-- Content spacer -->
+          <div class="col-lg-2 col-md-3 base spacer"></div>
+          <!-- Content secondary: Sidebar -->
+          <nav id="page_sidebar" class="col-lg-2 col-md-3 base secondary navbar" role="navigation">
+            <input id="page_search" class="form-control" type="text" placeholder="Search placeholder" aria-label="search">
+            {%- include layout/sidebar.html -%}
+          </nav>
+          <div class="col flex__wrapper">
+
+            <!-- Content primary: Main -->
+            <main class="col base primary">
+              {{ content }}
+            </main>
+            <!-- Content tertiary: Toc -->
+            <nav id="page_toc" class="col-lg-2 col-md-2 base tertiary navbar">
+              {%- include layout/toc.html html=content sanitize=true h_min=2 h_max=3
+                id="" class="nav.nav-pills.flex-column" item_class="nav-item.tocentry-h%level%" anchor_class="nav-link"
+              -%}
+            </nav>
+          </div><!-- end flex__wrapper -->
+        </div><!-- end row -->
+      </div><!-- end site__content -->
+    </div><!-- end push__wrapper -->
+
+    <!-- Footer section -->
+    <footer class="site__footer h-card">
+      <div class="row">
+        <!-- Footer spacer -->
+        <div class="col-lg-2 col-md-3 base spacer"></div>
+        <!-- Footer primary -->
+        <div class="col base primary">
+          {%- include layout/footer.html -%}
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
