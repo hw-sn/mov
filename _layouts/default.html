@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {%- include _site/head.html -%}
+  {%- include site/head.html -%}
 
   <body data-spy="scroll" data-target="#page_toc" data-offset="100">
     <div id="page_overlay"></div>
@@ -22,7 +22,7 @@
           <nav class="col primary" role="navigation">
             <button id="toggle_sidebar" onclick="nav_toggle()" class="btn"><i class="fa fa-bars"></i></button>
             <nav id="page_breadcrumb" aria-label="breadcrumb">
-              {%- include _site/breadcrumb.html -%}
+              {%- include site/breadcrumb.html -%}
             </nav>
           </nav>
         </div>
@@ -36,7 +36,7 @@
           <!-- Content secondary: Sidebar -->
           <nav id="page_sidebar" class="col-lg-2 col-md-3 base secondary navbar" role="navigation">
             <input id="page_search" class="form-control" type="text" placeholder="Search placeholder" aria-label="search">
-            {%- include _site/sidebar.html -%}
+            {%- include site/sidebar.html -%}
           </nav>
           <div class="col flex__wrapper">
 
@@ -46,7 +46,7 @@
             </main>
             <!-- Content tertiary: Toc -->
             <nav id="page_toc" class="col-lg-2 col-md-2 base tertiary navbar">
-              {%- include _site/toc.html html=content sanitize=true h_min=2 h_max=3
+              {%- include site/toc.html html=content sanitize=true h_min=2 h_max=3
                 id="" class="nav.nav-pills.flex-column" item_class="nav-item.tocentry-h%level%" anchor_class="nav-link"
               -%}
             </nav>
@@ -62,7 +62,7 @@
         <div class="col-lg-2 col-md-3 base spacer"></div>
         <!-- Footer primary -->
         <div class="col base primary">
-          {%- include _site/footer.html -%}
+          {%- include site/footer.html -%}
         </div>
       </footer>
     </div>

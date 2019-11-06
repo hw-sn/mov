@@ -21,7 +21,7 @@ layout: default
     {% assign dir       = page.url   | remove_first: "/" %}
     {% assign level     = dir        | split: "/" | size | plus: 1 %}
     <ul class="list-group list-group-flush">
-      {%- include _site/show-children.html
+      {%- include site/show-children.html
           dir=dir docs=documents
           level=level maxLevel=level
           liClass="list-group-item"

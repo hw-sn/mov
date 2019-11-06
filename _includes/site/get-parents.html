@@ -7,7 +7,7 @@
     {% for p in allDocs %}
         {% assign pPageLevel = p.dir | remove_first: "/" | split:"/" | size %}
         {% if pPageLevel == parentLevel and currentPage.dir contains p.dir %}
-            {% include _site/get-parents.html page=p minLevel=minLevel docs=allDocs %}
+            {% include site/get-parents.html page=p minLevel=minLevel docs=allDocs %}
             <li class="breadcrumb-item"><a href="{{site.baseurl}}{{p.url}}">{{ p.title }}</a></li>
         {% endif %}
     {% endfor %}

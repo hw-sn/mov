@@ -52,7 +52,7 @@ __ Liquid Exception: Nesting too deep __
     <p class="excerpt">{{ p.content | markdownify | strip_html | truncate:100}}</p>{% endif %}
     {% if nextLevel <= maxLevel %}
     <ul class="nav nav-pills flex-column">
-      {%- include _site/show-children.html dir=p.dir docs=allDocs level=nextLevel maxLevel=maxLevel liClass=listClass aClass=linkClass showSummary=summary -%}
+      {%- include site/show-children.html dir=p.dir docs=allDocs level=nextLevel maxLevel=maxLevel liClass=listClass aClass=linkClass showSummary=summary -%}
       <li hidden>&nbsp;</li>
     </ul>
     {% endif %}

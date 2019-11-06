@@ -7,7 +7,7 @@
 
   <ol class="breadcrumb">
     {% assign documents = site.pages | where: "isDoc", true | sort: "index" %}
-    {% include _site/get-parents.html page=page minLevel=minLevel docs=documents %}
+    {% include site/get-parents.html page=page minLevel=minLevel docs=documents %}
     <li class="breadcrumb-item">{{ page.title }}</li>
   </ol>
 {% endunless %}

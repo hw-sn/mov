@@ -11,7 +11,7 @@
     {% assign dir = "docs" %}
 
     <ul class="nav nav-pills flex-column side-lvl-0">
-    {%- include _site/show-children.html
+    {%- include site/show-children.html
       dir=dir docs=documents
       level=1 maxLevel=2
       liClass="nav-item" aClass="nav-link"
@@ -30,7 +30,7 @@
     {% assign end       = start      | plus: 2 %}
 
     <ul class="nav nav-pills flex-column side-lvl-0">
-    {%- include _site/show-children.html
+    {%- include site/show-children.html
       dir=dir docs=documents
       level=start maxLevel=end
       liClass="nav-item" aClass="nav-link"
