@@ -1,0 +1,25 @@
+/* Digital primary palette
+  ========================================================================== */
+
+$color-shade-0: #f7f7f7; //Rich White
+$color-shade-1: #f0f0f0; //Lyric White
+$color-shade-2: #e0e0e0; // 10%
+$color-shade-3: #c0c0c0; // 25%
+$color-shade-4: #a0a0a0; // 40%
+$color-shade-5: #808080; // 50%
+$color-shade-6: #707070; // 70%
+$color-shade-7: #303030; // 85%
+$color-shade-8: #202020; // 90%
+
+$color-text:         $color-shade-7;
+$color-background:   #ffffff;
+$color-background-2: $color-shade-7;
+$color-brand:        #ee3124;
+
+$color-link:        #1792e5;
+$color-link-hover:  #1271b1;
+$color-link-active: #0a4166;
+
+$color-link-alt:        #45a8ea;
+$color-link-alt-hover:  #8bc9f2;
+$color-link-alt-active: #d1e9fa;

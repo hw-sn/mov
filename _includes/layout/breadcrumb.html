@@ -1,0 +1,16 @@
+{% comment %}+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Breadcrumb logic by David Jacquel
+https://stackoverflow.com/questions/33274603/
+***** modified *****
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++{% endcomment %}
+{% unless page.no_breadcrumbs %}
+  {% assign minLevel = include.minLevel %}
+  {% if minLevel == nil %}{% assign minLevel = 1 %}{% endif %}
+
+  <ol class="breadcrumb">
+    {% assign documents = site.pages | where: "isDoc", true | sort: "index" %}
+    {% include layout/get-parents.html page=page minLevel=minLevel docs=documents %}
+    <li class="breadcrumb-item">{{ page.title }}</li>
+  </ol>
+
+{% endunless %}

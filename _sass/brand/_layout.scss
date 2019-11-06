@@ -1,0 +1,357 @@
+// Import Base units
+@import
+  "brand/base"
+;
+/******************************************************************************/
+// Body definition
+body {
+  position: relative;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  text-rendering: optimizeLegibility;
+}
+p {
+  margin-bottom: $base-paragraph-space;
+}
+
+// Heading definition
+h1 {
+  font-size: 1.75rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 1.438rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.page__title {
+  margin: 0;
+  font-size: 1.96rem;
+  font-weight: 300;
+  text-transform: initial;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.375rem;
+  }
+  h2 {
+    font-size: 1.96rem;
+  }
+  h3 {
+    font-size: 1.375rem;
+  }
+  .page__title {
+    font-size: 2.375rem;
+  }
+}
+h2 + h3, h3 + h4 {
+  padding-top: 0.5rem;
+}
+
+// Link definition
+a:hover {
+  text-decoration: none;
+}
+
+/******************************************************************************/
+// Base layout definition
+.base {
+  padding: $small-gutter-width $grid-gutter-width;
+}
+.secondary {
+  min-width: $logo-width + (2 * $grid-gutter-width);
+  position: fixed;
+  z-index: 1;
+}
+.row {
+  height: 100%;
+  margin: 0;
+}
+
+// Flex definition
+.spacer,
+.secondary,
+.tertiary {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .spacer,
+  .secondary {
+    display: initial !important;
+  }
+  .secondary {
+    position: fixed;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tertiary {
+    display: initial;
+  }
+}
+
+#page_overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  #page_overlay {
+    display: none !important;
+  }
+}
+
+
+// Header definition
+.site__header {
+  .primary {
+    min-height: $grid-gutter-width + ($small-gutter-width * 2);
+    padding: 0 $grid-gutter-width;
+    display: flex;
+    align-items: center;
+  }
+  .secondary {
+    top: 0;
+    height: $header-height;
+    text-align: center;
+  }
+  p {
+    margin-top: 0.1rem;
+    margin-bottom: 0;
+    font-size: $small-font-size;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  img {
+    width: $logo-width;
+  }
+}
+
+// Search definition
+#page_search {
+  height: 2rem;
+  font-weight: 300;
+}
+
+// Breadcrumb definition
+#page_breadcrumb {
+  .breadcrumb {
+    margin-bottom: initial;
+    padding: 0;
+    font-size: $small-font-size;
+  }
+  .breadcrumb-item+.breadcrumb-item::before {
+    content: "〉";
+  }
+}
+
+// Sidebar definition
+#toggle_sidebar {
+  margin-right: $small-gutter-width;
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+  font-size: 1.75rem;
+  line-height: 0;
+}
+@media screen and (min-width: 768px) {
+  #toggle_sidebar {
+    display: none;
+  }
+}
+#page_sidebar {
+  padding-top: 0.3rem;
+  .side-lvl-0 {
+    padding: 2.125rem 0 0 0;
+    a {
+      padding: .125rem 0;
+      border-radius: initial;
+      font-size: $small-font-size;
+      font-weight: 700;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+    li {
+      padding: .125rem 0;
+    }
+    ul {
+      padding: 0 0 $small-gutter-width 0;
+      a {
+        font-size: initial;
+        text-transform: initial;
+        font-weight: 300;
+      }
+      .active {
+        font-weight: 700;
+      }
+      ul {
+        padding: 0 0 0 1rem;
+      }
+    }
+  }
+}
+
+// Main definition
+.site__content {
+  .flex__wrapper {
+    display: flex;
+    padding: 0;
+  }
+  .primary {
+    max-width: $min-content-width;
+    padding-top: $grid-gutter-width + $small-gutter-width;
+  }
+  .secondary {
+    top: $header-height;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  .tertiary {
+    position: fixed;
+    right: 0;
+    overflow-y: auto;
+    top: $header-height;
+    bottom: $footer-height;
+  }
+}
+
+// Main Header definition
+.page__header {
+  margin-top: -0.5rem;
+  padding: 0 0 (2 * $small-gutter-width) 0;
+}
+
+// Main List definition
+main {
+  ul, ol {
+    li {
+      padding: 0.25rem 0;
+    }
+    p {
+      margin-bottom: 0;
+      padding-top: 0.25rem;
+    }
+  }
+  ul {
+    padding-left: 2rem;
+    list-style-type: disc;
+    li {
+      margin-left: 1rem;
+    }
+  }
+  ol {
+    margin-left: 2rem;
+    padding-left: 0;
+    counter-reset: item;
+    list-style: none;
+  }
+  ol > li {
+    margin-left: 1rem;
+    text-indent: -1rem;
+  }
+  ol > li::before {
+    content: counter(item, decimal-leading-zero) " ";
+    counter-increment: item;
+    padding-right: 0.5rem;
+    font-weight: 800;
+    vertical-align: top;
+    display: inline-block;
+  }
+  ol > li > p {
+    text-indent: 0;
+  }
+  ol > li > p:first-child {
+    display: inline;
+    margin-left: 0
+  }
+  ul > * > ul,
+  ol > * > ul {
+    padding-left: 1rem;
+    text-indent: initial;
+  }
+  ol > * > ol {
+    padding-left: 0;
+  }
+  ul > * > ol {
+    margin-left: -1rem;
+    padding-left: 0;
+  }
+  p + ul, p + ol {
+    margin-top: -1rem;
+  }
+}
+
+// Toc definition
+#page_toc {
+  padding: 0 $grid-gutter-width 0 0;
+  font-size: $small-font-size;
+  font-weight: 300;
+  li {
+    list-style-type: none;
+    margin-left: initial;
+  }
+  a {
+    padding: .125rem 0 .125rem 1.5rem;
+  }
+}
+#page_toc ul > * > ul {
+  padding-left: 1rem;
+}
+
+// Chapter Index definition
+#page_children {
+  .list-group-item {
+    margin-left: initial;
+    padding-left: initial;
+    padding-right: initial;
+  }
+  p {
+    padding-top: initial;
+  }
+  .excerpt {
+    font-size: $small-font-size;
+  }
+}
+
+// Footer definition
+.push__wrapper {
+  // ATTENTION! Change if footer height changes
+  // $footer-height-md
+  min-height: calc(100vh - 6rem);
+}
+.site__footer {
+  height: $footer-height-md;
+  font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  .push__wrapper {
+    // ATTENTION! Change if footer height changes
+    // $footer-height
+    min-height: calc(100vh - 3.16rem);
+  }
+  .site__footer {
+    height: $footer-height;
+    white-space: nowrap;
+    .first {
+      padding-left: 0;
+      text-align: left;
+    }
+    .last {
+      padding-right: 0;
+      text-align: right;
+    }
+  }
+}
