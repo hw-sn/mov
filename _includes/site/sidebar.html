@@ -1,0 +1,44 @@
+{% unless page.no_sidebar %}
+<!-- Sidebar logic by David Jacquel
+     https://stackoverflow.com/questions/33274603/
+     ***** modified ***** -->
+  {% assign documents = site.pages | where: "isDoc", true | sort: "index" %}
+  {% if page.url == "/" or page.url == "/docs/" %}
+    {% comment %}+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    Sidebar for root index.html and docs/index.html: Only Docs and children
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++{% endcomment %}
+    {% assign documents = site.pages | where: "isDoc", true | sort: "index" %}
+    {% assign dir = "docs" %}
+
+    <ul class="nav nav-pills flex-column side-lvl-0">
+    {%- include _site/show-children.html
+      dir=dir docs=documents
+      level=1 maxLevel=2
+      liClass="nav-item" aClass="nav-link"
+    -%}
+    </ul>
+
+  {% else %}
+    {% comment %}+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    Sidebar for doc pages: Show parent, siblings, and children
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++{% endcomment %}
+    {% assign documents = site.pages | where: "isDoc", true | sort: "index" %}
+    {% assign dir       = page.url   | remove_first: "/" %}
+    {% assign self      = page.url   | split: "/" | last | append: "/"%}
+    {% assign dir       = dir        | remove: self %}
+    {% assign start     = dir        | split: "/" | size %}
+    {% assign end       = start      | plus: 2 %}
+
+    <ul class="nav nav-pills flex-column side-lvl-0">
+    {%- include _site/show-children.html
+      dir=dir docs=documents
+      level=start maxLevel=end
+      liClass="nav-item" aClass="nav-link"
+    -%}
+    </ul>
+
+  {% endif %}
+<script>
+
+</script>
+{% endunless %}
