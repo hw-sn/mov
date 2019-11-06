@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include _framework/head.html -%}
+
+  <body data-spy="scroll" data-target=".navbar">
+    <div class="container">
+      <div class="row">
+    <aside class="col-lg-3">
+    {%- include _framework/header.html -%}
+    {%- include _framework/sidebar.html -%}
+  </aside>
+  <div class="col-md-3">
+    {%- include _framework/aside.html -%}
+  </div>
+    <div class="content__container col-md-6">
+
+      <div class="content__wrapper">
+
+        {%- include _framework/topnav.html -%}
+        <div class="flex__container">
+          <main role="main" aria-label="Content">
+            {{ content }}
+          </main>
+
+        </div>
+      </div>
+      {%- include _framework/footer.html -%}
+    </div>
+
+  </div>
+</div>
+  </body>
+</html>

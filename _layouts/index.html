@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article>
+
+  <header class="page__header post-header">
+    <h1 class="page__title post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="page__content post-content">
+    {{ content }}
+  </div>
+
+  <nav id="page_children" class="">
+    <h2>Contents</h2>
+    <!-- Show-children logic by David Jacquel
+         https://stackoverflow.com/questions/33274603/
+         ***** modified ***** -->
+    {% assign documents = site.pages | where: "isDoc", true | sort: "index" %}
+    {% assign dir       = page.url   | remove_first: "/" %}
+    {% assign level     = dir        | split: "/" | size | plus: 1 %}
+    <ul class="list-group list-group-flush">
+      {%- include _site/show-children.html
+          dir=dir docs=documents
+          level=level maxLevel=level
+          liClass="list-group-item"
+          showSummary=true
+      -%}
+    </ul>
+  </nav>
+
+</article>

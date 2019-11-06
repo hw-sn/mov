@@ -1,0 +1,191 @@
+html, body {
+  height: 100%;
+}
+
+/* Sidebar definitions
+  ========================================================================== */
+.site__header, .nav__sidebar, .content__wrapper {
+  padding: $spacing-smaller $spacing-unit;
+}
+
+.site__header, .nav__sidebar {
+  width: $sidebar-width;
+  position: fixed;
+  transform: translateX((-$sidebar-width));
+  transition: all 0.15s ease;
+  z-index: 2;
+}
+@media screen and (min-width: 720px) {
+  .site__header, .nav__sidebar {
+    transform: translateX(0);
+  }
+}
+
+.site__header {
+  height: $header-height;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  p {
+    margin: initial;
+    padding: initial;
+    font-size: $spacing-unit / 2;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  img {
+    width: $logo-width;
+    margin-bottom: $spacing-smaller * 0.6;
+  }
+}
+
+.nav__sidebar {
+  top: $header-height;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+nav {
+  font-size: $small-font-size;
+}
+
+/* Main definitions
+  ========================================================================== */
+.content__container {
+  height: 100vh;
+  margin-bottom: -9em;
+}
+
+.content__wrapper {
+  min-height: 100%;
+  height: fit-content;
+  margin-bottom: -9em;
+  padding-bottom: 9em;
+}
+main {
+  width: 100%;
+  padding: $spacing-unit 0 9em 0;
+  margin-bottom: -9em;
+}
+@media screen and (min-width: 768px) {
+  .content__wrapper {
+    margin-left: $sidebar-width;
+    padding-left: $spacing-unit;
+  }
+  main {
+    padding: $spacing-unit 0 3em 0;
+    margin-bottom: -3em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .content__container {
+    margin-bottom: -3em;
+  }
+  .content__wrapper {
+    margin-bottom: -3em;
+    padding-bottom: 3em;
+  }
+}
+
+article {
+  max-width: $content-width;
+}
+
+/* Footer definitions
+  ========================================================================== */
+footer {
+  height: 9em;
+  padding: 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    margin-left: $sidebar-width;
+    padding-left: $spacing-unit;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer {
+    height: 3em;
+  }
+  .footer__left {
+    text-align: left;
+  }
+  .footer__right {
+    text-align: right;
+  }
+}
+
+footer .row {
+  padding: ($spacing-smaller / 2) $spacing-unit;
+}
+
+.footer__left, .footer__center, .footer__right {
+  margin: auto;
+  padding: initial;
+  font-size: $small-font-size;
+}
+
+.footer__center {
+  font-size: $spacing-smaller;
+}
+
+/* Table of Contents definitions
+  ========================================================================== */
+aside {
+  border-left: 1px solid;
+}
+
+
+/*  .flex__container {
+    display: flex;
+    justify-content: center;
+    max-width: $content-width + $sidebar-width;
+    margin: 0 auto;
+    padding-right: $spacing-unit;
+  }
+
+aside {
+  display: none;
+  width: $sidebar-width;
+}
+@media screen and (min-width: 1200px) {
+  aside {
+    display: flex;
+    margin-left: $spacing-unit;
+  }
+}
+/*
+.page__toc {
+  position: fixed;
+  top: $header-height;
+  width: $sidebar-width - $spacing-unit;
+  padding-left: $spacing-smaller;
+  border-left: 1px solid;
+}
+/*
+.page__toc ul {
+  list-style-type: none;
+  margin: initial;
+  padding: initial;
+  word-wrap: break-word;
+  a {
+    display: block;
+    padding: 0.4em 0;
+  }
+  .tocentry-h1 {
+    font-weight: bold;
+    letter-spacing: -0.5px;
+  }
+  .tocentry-h2 {
+    font-size: $small-font-size;
+    font-weight: 300;
+  }
+  .tocentry-h3 {
+    font-size: $small-font-size;
+    font-weight: 300;
+    padding-left: 1em;
+  }
+}
+*/
