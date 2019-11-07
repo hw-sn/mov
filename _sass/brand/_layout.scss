@@ -282,6 +282,7 @@ main {
     text-indent: initial;
   }
   ol > * > ol {
+    margin-left: 1rem;
     padding-left: 0;
   }
   ul > * > ol {
@@ -290,6 +291,11 @@ main {
   }
   p + ul, p + ol {
     margin-top: -1rem;
+  }
+
+  ol p + ul, ol p + ol,
+  ul p + ul, ul p + ol {
+    margin-top: initial;
   }
 }
 
