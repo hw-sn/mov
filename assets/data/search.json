@@ -4,7 +4,8 @@ search: exclude
 no_crawl: true
 ---
 [
-{% for item in site.pages %}
+{% assign items = site.pages | where: "crawl", true %}
+{% for item in items %}
 {%- unless item.search == "exclude" or item.title == nil -%}
 {
   "title"       : "{{ item.title | strip_html | escape }}",
@@ -22,17 +23,7 @@ no_crawl: true
   {{ pageContent }}",
   "url"         : "{{ item.url | prepend:site.baseurl }}"
 }
-{%- unless forloop.last and site.posts.size < 1 -%},{%- endunless -%}
-{% endunless %}
-{% endfor %}
-{%- for item in site.posts -%}
-{
-  "title"       : "{{ item.title | strip_html | escape }}",
-  "tags"        : "{{ item.tags  | join: ', '}}",
-  "category"    : "{{ item.categories | join: ', '}}",
-  "description" : "{{ item.description }}",
-  "url"         : "{{ item.url | prepend:site.baseurl }}"
-}
 {%- unless forloop.last -%},{%- endunless -%}
+{% endunless %}
 {% endfor %}
 ]

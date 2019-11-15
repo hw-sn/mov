@@ -2,11 +2,10 @@
 title: Apples
 version: 1.0
 categories: [fruits, super, mega, healthy]
+tags: [tree, sweet, vitamin-c]
 index: 20
 description: All you want to know about apples.
 ---
-
-{{page.categories}}
 
 This is the base Jekyll theme. ''
 You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)

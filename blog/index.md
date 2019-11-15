@@ -1,6 +1,7 @@
 ---
 title: Updates
 layout: page
+crawl: false
 ---
 
 
