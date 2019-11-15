@@ -1,0 +1,38 @@
+---
+layout: null
+search: exclude
+no_crawl: true
+---
+[
+{% for item in site.pages %}
+{%- unless item.search == "exclude" or item.title == nil -%}
+{
+  "title"       : "{{ item.title | strip_html | escape }}",
+  "tags"        : "{{ item.tags  | join: ', '}}",
+  "category"    : "{% if item.categories %}{{ item.categories | join: ', '}}{% else %} {% endif %}",
+  "description" : "{% if item.description %}{{ item.description }}{% else %}{{ item.content | markdownify | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip | truncate: 100 | append: ' '}}{% endif %}",
+  "content"     : "{%- assign pageContent = item.content | downcase | markdownify | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip -%}
+    {%- assign cleanEx   = ':;/\+*_-—~!?§%&#;()[]{}<>“”‘’²³°^´`' | split: '' -%}
+    {%- for c in cleanEx -%}
+      {%- assign pageContent = pageContent | replace: c, ' ' -%}
+    {%- endfor -%}
+    {%- assign pageContent = pageContent | replace: '. ', ' ' -%}
+    {%- assign pageContent = pageContent | replace: ', ', ' ' -%}
+  {%- assign pageContent = pageContent | split: ' ' | sort_natural | uniq | join: ', ' -%}
+  {{ pageContent }}",
+  "url"         : "{{ item.url | prepend:site.baseurl }}"
+}
+{%- unless forloop.last and site.posts.size < 1 -%},{%- endunless -%}
+{% endunless %}
+{% endfor %}
+{%- for item in site.posts -%}
+{
+  "title"       : "{{ item.title | strip_html | escape }}",
+  "tags"        : "{{ item.tags  | join: ', '}}",
+  "category"    : "{{ item.categories | join: ', '}}",
+  "description" : "{{ item.description }}",
+  "url"         : "{{ item.url | prepend:site.baseurl }}"
+}
+{%- unless forloop.last -%},{%- endunless -%}
+{% endfor %}
+]

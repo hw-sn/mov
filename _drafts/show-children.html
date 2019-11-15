@@ -54,7 +54,14 @@ __ Liquid Exception: Nesting too deep __
   <li class="{{listClass}}" id="{{p.title}}">
     <a href="{{site.baseurl}}{{p.url}}" class="{{linkClass}}{%if p.url == page.url%} active{%endif%}">{{ p.title }}</a>
     {% if summary %}
-    <p class="excerpt">{{ p.content | markdownify | strip_html | truncate:100}}</p>{% endif %}
+    <p class="excerpt">
+      {% if p.description %}
+        {{ p.description | markdownify | strip_html }}
+      {% else %}
+        {{ p.content | markdownify | strip_html | truncate:100 }}
+      {% endif%}
+    </p>
+    {% endif %}
     {% if nextLevel <= maxLevel %}
     <ul class="nav nav-pills flex-column">
       {%- include layout/show-children.html dir=p.dir docs=allDocs level=nextLevel maxLevel=maxLevel liClass=listClass aClass=linkClass showSummary=summary -%}

@@ -40,14 +40,15 @@ defaults:
       path: "docs"
     values:
       layout: "page"
-      isDoc: true
+      crawl: true
   -
     scope:
-      path: ""
-      type: "posts"
+      path: "blog"
     values:
       layout: "post"
-      no_breadcrumbs: true
+      category: "blog"
+      date: ""
+      crawl: true
 
 # Permalink style for published files
 permalink: pretty

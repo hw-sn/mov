@@ -1,4 +1,4 @@
 ---
-layout: index
 title: Recipes
+show_children: true
 ---

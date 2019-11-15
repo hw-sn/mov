@@ -1,4 +1,4 @@
 ---
-layout: index
 title: Citrus
+show_children: true
 ---

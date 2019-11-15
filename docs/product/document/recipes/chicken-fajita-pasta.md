@@ -1,5 +1,6 @@
 ---
 title: Creamy Chicken Fajita Pasta
+index: 50
 ---
 We took everything you love about chicken fajitas and turned it into an unforgettable pasta dish. It's fast and creamy and makes for the easiest weeknight dinner. It's full of flavor and will have you coming back for bite after bite.
 

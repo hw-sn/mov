@@ -1,4 +1,4 @@
 ---
-layout: index
 title: Document
+show_children: true
 ---

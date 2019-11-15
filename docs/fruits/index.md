@@ -1,4 +1,4 @@
 ---
-layout: index
 title: Fruits
+show_children: true
 ---

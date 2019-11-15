@@ -21,6 +21,17 @@ a:active,
   color: $color-link-active;
 }
 
+// List group definition
+.list-group-item {
+  border-color: $color-shade-1;
+  background-color: initial;
+}
+
+// Form definition
+.form-control:focus {
+  box-shadow: 0 4px 2px -2px rgba(123, 123, 123, 0.25) !important;
+}
+
 // Header definition
 .site__header {
   .secondary a {
@@ -30,24 +41,32 @@ a:active,
 #page_overlay {
   background: rgba(0,0,0,0.4);
 }
+#toggle_sidebar, #start-search {
+  color: $color-shade-4;
+}
+
 // Search definition
 #page_search {
-  background-color: $color-shade-8;
-  border-color: $color-shade-6;
-  border-radius: 0;
-  color: $color-shade-3 !important;
+  .form-control {
+    border-bottom: 1px solid $color-shade-4;
+  }
+  #results-container {
+    background-color: $color-background;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.4);
+  }
 }
-#page_search::-webkit-input-placeholder { /* WebKit browsers */
-  color: $color-shade-4 !important;
+
+#page_search .form-control::-webkit-input-placeholder { /* WebKit browsers */
+  color: $color-shade-2 !important;
 }
-#page_search:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: $color-shade-4 !important;
+#page_search .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $color-shade-2 !important;
 }
-#page_search::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color: $color-shade-4 !important;
+#page_search .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: $color-shade-2 !important;
 }
-#page_search:-ms-input-placeholder { /* Internet Explorer 10+ */
-  color: $color-shade-4 !important;
+#page_search .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: $color-shade-2 !important;
 }
 
 // Breadcrumb definition
@@ -58,11 +77,11 @@ a:active,
   .breadcrumb-item+.breadcrumb-item::before {
     color: $color-shade-2;
   }
-  a {
-    color: $color-shade-6;
-  }
-  li:last-child {
-    color: $color-link;
+  //a {
+  //  color: $color-shade-6;
+  //}
+  li:last-child a {
+    color: $color-link-active;//$color-link;
   }
 }
 
@@ -70,9 +89,6 @@ a:active,
 .secondary {
   background: $color-background-2;
   border-right: 1px solid $color-shade-8;
-}
-#toggle_sidebar {
-  color: $color-shade-6;
 }
 #page_sidebar {
   a {
@@ -107,16 +123,10 @@ a:active,
   }
 }
 
-// Chapter Index definition
-#page_children {
-  .list-group-item {
-    border-color: $color-shade-1;
-  }
-}
-
 // Footer definition
 .site__footer {
-  background-color: $color-shade-1;
+  //background-color: $color-shade-1;
+  border-top: 1px solid $color-shade-4;
   color: $color-shade-6;
   font-size: $small-font-size;
   text-align: center;

@@ -1,0 +1,32 @@
+---
+layout: null
+---
+[
+{%- assign items = site.pages  | where: "crawl", true -%}
+{% for item in items %}
+{%- comment -%}+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Prepare Path URLs for Sidebar and Breadcrumb
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++{%- endcomment -%}
+{%- assign self        = site.baseurl | append: item.url -%}
+{%- assign self_string = item.url     | split: '/' | last | append: '/' -%}
+{%- assign parent_url  = item.url     | remove: self_string | prepend: site.baseurl %}
+{%- assign self_path   = ''           | split: '/' -%}
+{%- assign levels      = item.url     | remove_first: '/' | split: '/' -%}
+{%- for level in levels -%}
+{%- assign self_path   = self_path    | push: self -%}
+{%- assign self        = self         | remove: self_string -%}
+{%- assign self_string = self         | split: '/' | last | append: '/' -%}
+{%- endfor -%}
+{%- assign self_path   = self_path    | reverse | remove: '' | join: ', ' -%}
+{
+"title"       : "{{ item.title | escape }}",
+"url"         : "{{ site.baseurl }}{{ item.url }}",
+"parent"      : "{{ parent_url }}",
+"path"        : {{ self_path }},
+"index"       : "{% if item.index %}{{ item.index }}{% else %}10000{% endif %}",
+"tags"        : "{{ item.tags  | join: ', '}}",
+"category"    : "{{ item.categories | join: ', '}}",
+"description" : "{% if item.description %}{{ item.description }}{% else %}{{ item.content  | truncate: 100 | markdownify | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | escape }}{% endif %}"
+}{% if forloop.last %}{% else %},{% endif %}
+{% endfor %}
+]

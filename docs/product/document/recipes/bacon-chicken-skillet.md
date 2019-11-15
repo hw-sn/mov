@@ -1,5 +1,6 @@
 ---
 title: Bacon Harvest Chicken Skillet
+index: 90
 ---
 This easy chicken thigh recipe with bacon and Brussels sprouts comes together in one skillet. It's the perfect cozy dinner to make during fall and winter.
 

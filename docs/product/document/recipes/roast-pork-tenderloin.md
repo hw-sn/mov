@@ -1,5 +1,6 @@
 ---
 title: Roast Pork Tenderloin
+index: 30
 ---
 A roasted pork tenderloin meets a mouth watering maple rosemary glaze and it's a match made in heaven. And there are no words for how good the potatoes are.
 
@@ -20,7 +21,7 @@ A roasted pork tenderloin meets a mouth watering maple rosemary glaze and it's a
     Place potatoes in a 9”-x-13” baking dish and drizzle with 2 tablespoons oil and season with salt and pepper.
 
     Place tenderloin on top.
-    
+
 2.  In a small bowl, whisk together remaining ½ cup oil, maple syrup, garlic, mustard, rosemary, and red pepper flakes.
 
     Season with salt and pepper then brush over tenderloin.

@@ -1,11 +1,15 @@
 ---
-title:  Home
+title: Updates
 layout: page
-crawl:  true
-no_breadcrumbs: true
 ---
 
-## Recent updates
+
+{% for item in site.pages %}
+{% if item.category contains "blog" %}
+{{ item.title | escape }}
+{% endif %}
+{% endfor %}
+
 <ul class="list-group list-group-flush">
 {% for item in site.pages %}
 {% if item.url contains "blog/" and item.url != "/blog/" %}

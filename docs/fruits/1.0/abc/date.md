@@ -1,9 +1,11 @@
 ---
 title: Dates
 index: 10
+description: This is a short summary.
 ---
 
 Dates are not only a system to measure time, but also the fruit of the date tree
+<!--more-->
 
 ## Heading A
 

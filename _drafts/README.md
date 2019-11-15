@@ -34,7 +34,8 @@ Each folder needs an `index.md` file.
 
 #### published
 
-Make pages _internal_:
+Make pages _internal_.
+By default `true`.
 
     ---
     title: My page
@@ -45,7 +46,8 @@ Alternatively move the pages to the `_drafts` folder.
 
 #### index
 
-Position the page in the sidebar:
+Position the page in the sidebar.
+By default `10000`.
 
     ---
     title: My page
@@ -54,7 +56,8 @@ Position the page in the sidebar:
 
 #### no_toc
 
-Disable the mini-toc for a page:
+Disable the mini-toc for a page.
+For `docs` folder by default `false`.
 
     ---
     title: My page
@@ -63,7 +66,8 @@ Disable the mini-toc for a page:
 
 #### no_breadcrumbs
 
-Disable the breadcrumbs for a page:
+Disable the breadcrumbs for a page.
+For `docs` folder by default `false`.
 
     ---
     title: My page
@@ -72,9 +76,20 @@ Disable the breadcrumbs for a page:
 
 #### layout
 
-Set the layout template for a page. Default is _page_.
+Set the layout template for a page.
+For `docs` folder by default `page`.
 
     ---
-    layout: index
-    title: My page
+    layout: home
+    title:  Home
+    ---
+
+#### crawl
+
+Exclude page from `sitemap.json`.
+For `docs` folder by default `true`.
+
+    ---
+    title: Template
+    crawl: false
     ---

@@ -1,4 +1,4 @@
 ---
-layout: index
 title: ABC
+show_children: true
 ---

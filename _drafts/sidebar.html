@@ -5,7 +5,7 @@ https://stackoverflow.com/questions/33274603/
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++{% endcomment %}
 {% unless page.no_sidebar %}
   {% assign documents = site.pages | where: "isDoc", true | sort: "index" %}
-  {% if page.url == "/" or page.url == "/docs/" %}
+  {% if page.url == "/" or page.url == "/search/" or page.url == "/docs/" %}
     {% comment %}+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     Sidebar for root index.html and docs/index.html: Only Docs and children
     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++{% endcomment %}

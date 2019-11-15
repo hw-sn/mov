@@ -1,0 +1,24 @@
+<!-- Html Elements for Search -->
+<div id="page_search">
+  <form class="form-inline">
+    <input id="search-input" type="text" placeholder="Search" class="form-control" aria-label="Search">
+  </form>
+  <div class="wrapper">
+    <ul id="results-container" class="list-group list-group-flush"></ul>
+  </div>
+</div>
+<button id="start-search" class="btn" onclick="location.href='{{ "/search/" | relative_url }}';"><i class="fa fa-search" aria-hidden="true"></i></button>
+
+<!-- Script pointing to search-script.js -->
+<script src="{{ "/assets/scripts/search.js" | relative_url }}" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script type="text/javascript">
+SimpleJekyllSearch.init({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  dataSource: '{{ "/assets/data/search.json" | relative_url }}',
+  searchResultTemplate: '<li class="list-group-item"><a href="{url}" title="{title}">{title}</a><p class="excerpt">{description}</p></li>',
+  noResultsText: '<p class="noResults">No results</p>',
+})
+</script>
